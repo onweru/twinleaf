@@ -1,0 +1,71 @@
+*
+  &, &::before, &::after
+    box-sizing: inherit
+    overscroll-behavior-x: none
+    overscroll-behavior-y: auto
+    margin: 0
+    padding: 0
+
+body, html
+  scroll-behavior: smooth
+  scroll-padding-top: 9rem
+  box-sizing: border-box
+  font-kerning: normal
+  -webkit-text-size-adjust: 100%
+  font-size: 62.5%
+  @media  screen and (max-width: 980px)
+    scroll-padding-top: 6.5rem
+body
+  font-family: var(--font)
+  color: var(--text)
+  line-height: 1.5
+  font-weight: 300
+  background-color: #fff
+  margin: 0 auto
+  position: relative
+  font-kerning: normal
+  min-height: 100vh
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  -webkit-overflow-scrolling: touch
+  overflow-x: hidden
+  font-size: 1.6rem
+
+a
+  text-decoration: none
+  color: inherit
+
+ol, ul
+  list-style: none
+
+img, svg
+  max-width: 100%
+  vertical-align: middle
+img
+  height: auto
+  padding: 0
+
+input[type="text"], input[type="tel"], input[type="email"], textarea
+  padding: 1.5rem 2rem
+  transition: opacity 600ms, transform 300ms
+  outline: none !important
+  font-weight: 500
+  border: 0.1rem solid rgba(153, 153, 153, 0.25)
+  &:focus-visible
+    border-color: var(--primary-gold)
+  &::placeholder
+    font-weight: 500
+
+.wrapper
+  margin-left: auto
+  margin-right: auto
+  padding-left: 2rem
+  padding-right: 2rem
+  max-width: var(--max-container-width)
+  @media  screen and (max-width: 667px)
+    padding-left: 2rem
+    padding-right: 2rem
+    overflow: hidden
+
+.hide
+  display: none

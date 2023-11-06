@@ -1,0 +1,18 @@
+<nav class="nav">
+  <div class="nav_wrapper">
+    <a href="/" class="nav_brand">
+      <img src="{{ site.Params.logo }}" alt="Twin Leaf Icon" class="nav_logo">
+    </a>
+    <input type="checkbox" name="" id="nav_toggle">
+    <ul class="nav_main">
+      {{ range site.Data.menu }}
+      <li class="nav_item">
+        <a class="nav_link" href="{{ .url }}"><span>{{ .name }}</span></a>
+      </li>
+      {{ end }}
+    </ul>
+    <label for="nav_toggle" class="nav_label">
+      <i class="fa-solid fa-bars" style="color: gold; font-size: 3rem;"></i>
+    </label>
+  </div>
+</nav>

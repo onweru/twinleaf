@@ -1,0 +1,33 @@
+{{ define "main" }}
+  <main class="main gallery_main" >
+    <header>
+      <h2>Projects</h2>
+    </header>
+    <section class="gallery_header gallery_wrapper">
+      <p class="gallery_description">
+        From drab to jaw-dropping. Here are a few of the projects we’ve completed around the Bay Area. Whether the property is dated and just needs a refresh or has major issues requiring a full remodel, we do it all.
+      </p>
+      <p class="gallery_description">Reach out to us today for more information</p>
+    </section>
+
+    <section class="subsection subsection_wrapper">
+      {{ range .Params.projects }}
+      <div class="subsection_grid">
+        <h2 class="subsection_title">{{ .title }}</h2>
+        {{ range .items }}
+        <div class="subsection_container">
+          <div class="subsection_img subsection_before">
+            <img src="{{ .before }}" alt="{{ .description }}">
+            <span>before</span>
+          </div>
+          <div class="subsection_img subsection_after">
+            <img src="{{ .after }}" alt="{{ .description }}">
+            <span>after</span>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+    </section>
+  </main>
+{{ end }}

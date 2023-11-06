@@ -1,0 +1,17 @@
+- name: ABOUT
+  url: "/#about"
+
+- name: SELLERS
+  url: "/#sellers"
+
+- name: AGENTS
+  url: "/#agents"
+
+- name: INVESTORS
+  url: "/#investors"
+
+- name: PROJECTS
+  url: /projects/
+
+- name: CONTACT US
+  url: "/#contact"
