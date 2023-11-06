@@ -1,0 +1,12 @@
+- name: Sellers
+  url: "./#sellers"
+- name: Agents
+  url: "./#agents"
+- name: Investors
+  url: "./#investors"
+- name: Projects
+  url: "./projects/"
+- name: About Us
+  url: "./#about"
+- name: Contact
+  url: "./#contact"

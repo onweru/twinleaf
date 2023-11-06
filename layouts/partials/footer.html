@@ -7,7 +7,7 @@
           Twin Leaf Properties was founded in 2018 to help people overcome challenges with homes and properties.
         </p>
         <div class="footer_callagent">
-          <img src="./assets/images/phone_icon.png" alt="">
+          <img src="/images/phone_icon.png" alt="">
           <span>Call Agent</span>
           <span>(510) 262-2867 </span>
         </div>
@@ -15,12 +15,11 @@
       <div class="footer_explore">
         <h4>Explore</h4>
         <ul class="footer_links">
-          <li class="footer_link"><a href="./index.html#sellers">Sellers</a></li>
-          <li class="footer_link"><a href="./index.html#agents">Agents</a></li>
-          <li class="footer_link"><a href="./index.html#investors">Investors</a></li>
-          <li class="footer_link"><a href="./projects.html">Projects</a></li>
-          <li class="footer_link"><a href="./index.html#about">About Us</a></li>
-          <li class="footer_link"><a href="./index.html#contact">Contact</a></li>
+          {{ range site.Data.footer }}
+            <li class="footer_link">
+              <a href="{{ .url }}">{{ .name }}</a>
+            </li>
+          {{ end }}
         </ul>
       </div>
       <div class="footer_details">
@@ -46,4 +45,4 @@
     </div>
   </div>
 </footer>
-<script src="./assets/js/index.js"></script>
+<script src="/js/index.js"></script>
