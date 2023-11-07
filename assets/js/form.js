@@ -119,12 +119,12 @@ function submitForm(form) {
       body: dataObj.data
     }
 
-    // fetch(formAction, options)
-    // .then(response => response.text())
-    // .then(() => {
-    //   formFeedBack(dataObj.raw["Name"], true);
-    // })
-    // .catch(() => formFeedBack());
+    fetch(formAction, options)
+    .then(response => response.text())
+    .then(() => {
+      formFeedBack(dataObj.raw["Name"], true);
+    })
+    .catch(() => formFeedBack());
 
     setTimeout(() => {
       let submitButton = elem('.form_button', form);
