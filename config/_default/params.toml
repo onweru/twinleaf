@@ -1,2 +1,5 @@
 logo = "/images/Twin Leaf Logo.png"
 # /images/Twin Leaf Logo.png
+[forms_endpoints]
+contact = "ff2eeaa979eb"
+newsletter = "ff2eeaa979eb"

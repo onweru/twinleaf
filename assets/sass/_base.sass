@@ -1,8 +1,6 @@
 *
   &, &::before, &::after
     box-sizing: inherit
-    // overscroll-behavior-x: none
-    // overscroll-behavior-y: auto
     margin: 0
     padding: 0
 
@@ -13,6 +11,7 @@ body, html
   font-kerning: normal
   -webkit-text-size-adjust: 100%
   font-size: 62.5%
+  overscroll-behavior: none
   @media  screen and (max-width: 980px)
     scroll-padding-top: 6.5rem
 body
@@ -69,3 +68,21 @@ input[type="text"], input[type="tel"], input[type="email"], textarea
 
 .hide
   display: none
+
+input
+  &.invalid
+    border-color: #f00
+    & + span
+      position: relative
+      display: block
+      &::after
+        content: "Please enter a 10-digit phone number"
+        position: absolute
+        top: 0.25rem
+        left: 0.15rem
+        color: #f00
+        background: #fff
+        padding: 0.25rem 1rem
+        border-radius: 0.25rem
+        border: 1px solid rgba(255,0,0,0.25)
+        font-size: 14px

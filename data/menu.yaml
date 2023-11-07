@@ -1,17 +1,12 @@
 - name: ABOUT
-  url: "/#about"
-
+  url: "#about"
 - name: SELLERS
-  url: "/#sellers"
-
+  url: "#sellers"
 - name: AGENTS
-  url: "/#agents"
-
+  url: "#agents"
 - name: INVESTORS
-  url: "/#investors"
-
+  url: "#investors"
 - name: PROJECTS
-  url: /projects/
-
+  url: "#projects"
 - name: CONTACT US
-  url: "/#contact"
+  url: "#contact"

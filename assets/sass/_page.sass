@@ -400,7 +400,7 @@ button
     text-align: center
     margin-bottom: 2rem
   &_carousel
-    width: 90%
+    // width: 90%
     margin-left: auto
     margin-right: auto
     overflow: hidden
@@ -472,7 +472,7 @@ button
   text-align: center
   &_wrapper
     @extend .wrapper
-    box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%)
+    box-shadow: 0 4px 4px 0 rgba(60, 64, 67, 0.3), 0 8px 12px 6px rgba(60, 64, 67, 0.15)
     margin-top: 6rem
     margin-bottom: 6rem
     @media  screen and (max-width: 667px)
@@ -659,6 +659,7 @@ button
         margin-bottom: 2rem
       input
         border-radius: .4rem
+        flex: 1
   &_emailus, &_callus
     @media  screen and (max-width: 667px)
       margin-bottom: 2rem
@@ -676,3 +677,160 @@ button
           text-align: center
           padding: 1.5rem 0
           color: red
+
+.carousel
+  --gap: 25px
+  display: grid
+  grid-auto-flow: column
+  overflow-x: auto
+  scroll-snap-type: inline mandatory
+  scroll-margin-inline-start: 0
+  grid-auto-columns: 100%
+  width: 100%
+  @media screen and (max-width: 1024px)
+    width: calc(100% - 5rem)
+    margin: auto
+  &:not(.projects)
+    @media screen and (min-width: 768px)
+      grid-auto-columns: calc((100% - var(--gap)) / 2)
+    @media screen and (min-width: 1024px)
+      grid-auto-columns: calc((100% - var(--gap) * 2) / 3)
+  &_item
+    scroll-snap-align: end
+    max-width: 100%
+
+.left, .right
+  --size: 2rem
+  width: var(--size)
+  aspect-ratio: 1/1
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+  font-size: 2rem !important
+
+.left
+  left: 0
+  transform: translateX(-1.5rem)
+  @media screen and (max-width: 1024px)
+    transform: translateX(0.75rem)
+
+.right
+  right: 0
+  transform: translateX(1.5rem)
+  @media screen and (max-width: 1024px)
+    transform: translateX(-0.75rem)
+
+
+.form
+  &_close
+    --size: 1.5rem
+    --offset: 1rem
+    top: calc(var(--offset) * 0.75)
+    right: var(--offset)
+    width: var(--size)
+    position: absolute
+    aspect-ratio: 1/1
+    cursor: pointer
+    z-index: 9
+
+  @keyframes errorShow
+    0%
+      transform: translateY(var(--displacement)) scale(0)
+      opacity: 1
+
+    6%
+      opacity: 1
+      transform: translateY(var(--displacement)) scale(1)
+
+    96%
+      opacity: 1
+      transform: translateY(var(--displacement)) scale(1)
+
+    100%
+      transform: translateY(var(--displacement)) scale(0)
+      opacity: 0
+
+
+  &_error
+    color: var(--color-danger)
+    max-width: 640px
+    margin-right: auto
+    margin-left: auto
+    padding: 0.5rem 1rem
+    background-color: var(--white)
+    position: relative
+    --displacement: -6.5rem
+    transform: translateY(var(--displacement)) scale(0)
+    margin-bottom: var(--displacement)
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.06)
+    opacity: 0
+    &.active
+      z-index: 10
+      opacity: 1
+      animation: 4s errorShow ease-in forwards
+
+  &_feedback
+    display: flex
+    justify-content: center
+    align-items: center
+    position: fixed
+    top: 10rem
+    padding: 25px 16px
+    background: var(--light)
+    z-index: 95
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.16)
+    left: 16px
+    right: 16px
+    @media screen and (min-width: 992px)
+      width: 100%
+      --max: 720px
+      max-width: var(--max)
+      --side: calc((100% - 720px) / 2)
+      left: var(--side)
+      right: var(--side)
+
+    &:not(.active)
+      display: none
+
+
+  &_fail, &_success
+    display: flex
+    flex-flow: column
+    align-items: center
+    text-align: center
+    &:not(.active)
+      display: none
+
+.overlay
+  position: fixed
+  align-items: center
+  background: transparent
+  z-index: 99999999
+  justify-content: center
+  align-items: center
+  left: 0
+  right: 0
+  // top: 55px
+  height: calc(100vh - 55px)
+  cursor: pointer
+  perspective: 500px
+  display: flex
+  top: 0
+  @media screen and (min-width: 992px)
+    height: 100vh
+
+  padding-left: 25px
+  padding-right: 25px
+  &:not(.active)
+    display: none
+
+  &.active > div:not(.swipe_control):not(.gallery_close), &.active > img.active
+    animation: enlarge 1s ease-in forwards
+
+  img
+    max-width: 100%
+    max-height: calc(100vh - 150px)
+    margin: 30px
+    &:not(.active)
+      display: none

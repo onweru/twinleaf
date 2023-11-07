@@ -1,5 +1,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ .Title }}</title>
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
@@ -12,5 +13,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
   integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
   crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="/css/main.css">
-<title>{{ .Title }}</title>
+
+{{- $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed" "enableSourceMap" "true") -}}
+{{- $styles := resources.Get "sass/main.sass" | resources.ExecuteAsTemplate "main.sass" . | resources.ToCSS $options | resources.Fingerprint "sha512" }}
+<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">

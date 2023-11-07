@@ -1,0 +1,14 @@
+{{- $variablesPath := "js/variables.js" }}
+{{- $variables := resources.Get $variablesPath | resources.ExecuteAsTemplate $variablesPath . }}
+
+{{- $formPath := "js/form.js" }}
+{{- $form := resources.Get $formPath | resources.ExecuteAsTemplate $formPath . }}
+
+{{- $indexPath := "js/index.js" }}
+{{- $index := resources.Get $indexPath | resources.ExecuteAsTemplate $indexPath . }}
+
+{{- $funcPath := "js/functions.js" }}
+{{- $functions := resources.Get $funcPath | resources.ExecuteAsTemplate $funcPath . }}
+
+{{- $bundle := slice $variables $functions $index $form | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}
+<script src="{{ $bundle.RelPermalink }}" async></script>

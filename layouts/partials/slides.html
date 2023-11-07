@@ -1,68 +1,20 @@
 <div class="projects_carousel">
-  <div class="projects_slider"> <!-- slider  Track--> 
-    <div class="projects_slide"> <!-- slider_child -->
+  <div class="projects_slider projects carousel">
+  {{ range site.Data.projects }}
+    <div class="projects_slide">
       <div class="projects_image projects_image-before">
-        <img src="/images/project/1-before.jpg" alt="">
+        <img src="{{ .before }}" alt="{{ .description }}">
         <span class="projects_span projects_span-before">BEFORE</span>
       </div>
       <div class="projects_image projects_image-after">
-        <img src="/images/project/1-after.jpg" alt="">
+        <img src="{{ .after }}" alt="{{ .description }}">
         <span class="projects_span projects_span-after">AFTER</span>
       </div>
     </div>
-    <div class="projects_slide"> <!-- slider_child -->
-      <div class="projects_image projects_image-before">
-        <img src="/images/project/2-before.jpg" alt="">
-        <span class="projects_span projects_span-before">BEFORE</span>
-      </div>
-      <div class="projects_image projects_image-after">
-        <img src="/images/project/2-after.jpg" alt="">
-        <span class="projects_span projects_span-after">AFTER</span>
-      </div>
-    </div>
-    <div class="projects_slide"> <!-- slider_child -->
-      <div class="projects_image projects_image-before">
-        <img src="/images/project/3-before.jpg" alt="">
-        <span class="projects_span projects_span-before">BEFORE</span>
-      </div>
-      <div class="projects_image projects_image-after">
-        <img src="/images/project/3-after.jpg" alt="">
-        <span class="projects_span projects_span-after">AFTER</span>
-      </div>
-    </div>
-    <div class="projects_slide"> <!-- slider_child -->
-      <div class="projects_image projects_image-before">
-        <img src="/images/project/4-before.jpg" alt="">
-        <span class="projects_span projects_span-before">BEFORE</span>
-      </div>
-      <div class="projects_image projects_image-after">
-        <img src="/images/project/4-after.jpg" alt="">
-        <span class="projects_span projects_span-after">AFTER</span>
-      </div>
-    </div>
-    <div class="projects_slide"> <!-- slider_child -->
-      <div class="projects_image projects_image-before">
-        <img src="/images/project/5-before.jpg" alt="">
-        <span class="projects_span projects_span-before">BEFORE</span>
-      </div>
-      <div class="projects_image projects_image-after">
-        <img src="/images/project/5-after.jpg" alt="">
-        <span class="projects_span projects_span-after">AFTER</span>
-      </div>
-    </div>
-    <div class="projects_slide"> <!-- slider_child -->
-      <div class="projects_image projects_image-before">
-        <img src="/images/project/6-before.jpg" alt="">
-        <span class="projects_span projects_span-before">BEFORE</span>
-      </div>
-      <div class="projects_image projects_image-after">
-        <img src="/images/project/6-after.jpg" alt="">
-        <span class="projects_span projects_span-after">AFTER</span>
-      </div>
-    </div>
+  {{ end }}
   </div>
 </div>
 <div class="projects_controls">
-  <i class="fa-solid fa-chevron-left projects_leftarrow"></i>
-  <i class="fa-solid fa-chevron-right projects_rightarrow"></i>
+  <i class="fa-solid fa-chevron-left projects_leftarrow left"></i>
+  <i class="fa-solid fa-chevron-right projects_rightarrow right"></i>
 </div>

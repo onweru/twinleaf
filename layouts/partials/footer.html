@@ -17,14 +17,14 @@
         <ul class="footer_links">
           {{ range site.Data.footer }}
             <li class="footer_link">
-              <a href="{{ .url }}">{{ .name }}</a>
+              <a href={{ absURL "" }}{{ .url }}>{{ .name }}</a>
             </li>
           {{ end }}
         </ul>
       </div>
       <div class="footer_details">
         <h4>Join Our Mailing List</h4>
-        <form action="" method="post">
+        <form class="form" method="post" data-form="newsletter">
           <input type="email" name="email" id="email" placeholder="Email address" required>
           <button type="submit">Subscribe</button>
         </form>
@@ -45,4 +45,4 @@
     </div>
   </div>
 </footer>
-<script src="/js/index.js"></script>
+{{ partial "feedback" . }}

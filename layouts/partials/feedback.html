@@ -1,0 +1,14 @@
+<div class="overlay overlay-feedback">
+  <div class="form_feedback">
+    <div class="form_success">
+      {{- partialCached "close" . }}
+      {{- partialCached "success" . }}
+      <div class="size-44 s-0 font-500 form_title">Success!<span class="form-name"></span>.</div>
+      <p>Thanks for contacting {{ site.Title }}.<br>We'll be in touch with you shortly.</p>
+    </div>
+    <div class="form_fail">
+      {{- partialCached "close" . }}
+      <p>Oops! please try again.</p>
+    </div>
+  </div>
+</div>
