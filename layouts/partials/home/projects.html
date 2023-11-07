@@ -1,0 +1,30 @@
+<section class="projects" id="projects">
+  <div class="projects_wrapper">
+    <h2 class="projects_title title">Our Projects</h2>
+    <p class="projects_text">See how we've transformed these properties while maintaining their character and place
+      in
+      the community.</p>
+    <button><a href="/projects/"><span>View All Projects <i class="fa-solid fa-chevron-right"></i></span></a></button>
+    
+    <div class="projects_carousel">
+      <div class="projects_slider projects carousel">
+      {{ range site.Data.projects }}
+        <div class="projects_slide">
+          <div class="projects_image projects_image-before">
+            <img src="{{ .before }}" alt="{{ .description }}">
+            <span class="projects_span projects_span-before">BEFORE</span>
+          </div>
+          <div class="projects_image projects_image-after">
+            <img src="{{ .after }}" alt="{{ .description }}">
+            <span class="projects_span projects_span-after">AFTER</span>
+          </div>
+        </div>
+      {{ end }}
+      </div>
+    </div>
+    <div class="projects_controls">
+      <i class="fa-solid fa-chevron-left projects_leftarrow left"></i>
+      <i class="fa-solid fa-chevron-right projects_rightarrow right"></i>
+    </div>
+  </div>
+</section>
