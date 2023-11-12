@@ -12,7 +12,7 @@
     display: flex
     justify-content: space-between
     color: #fff
-    padding: 1.5rem 0
+    padding: 1rem 0
     align-items: center
     @media  screen and (max-width: 980px)
       // height: auto
@@ -244,6 +244,7 @@ button
     align-items: center
     justify-content: space-between
     padding-top: 8rem
+    padding-bottom: 7rem
     @media  screen and (max-width: 667px)
       flex-direction: column
       padding-top: 2rem
@@ -260,6 +261,7 @@ button
     gap: 1rem
     align-content: start
     margin-bottom: 1rem
+    font-weight: 400
     img
       align-self: start
       height: 2.2rem
@@ -296,6 +298,7 @@ button
       scale: 1
   &_testimony
     grid-column: -2/-1
+    font-weight: 400
   &_name
     grid-column: 2/-1
     text-align: right
@@ -834,3 +837,10 @@ button
     margin: 30px
     &:not(.active)
       display: none
+
+.link
+  a
+  color: #0e5ff4
+  text-decoration: underline
+  &:hover
+    color: var(--secondary-darkblue)
