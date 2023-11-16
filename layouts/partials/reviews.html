@@ -4,7 +4,9 @@
     <div class="review_cards carousel">
       {{ range site.Data.reviews }}
       <div class="review_card carousel_item">
-        <img src="{{ .image }}" alt="{{ .name }}">
+        <div>
+          <img src="/images/quotation-mark_gold.png" alt="{{ .name }}">
+        </div>
         <p class="review_content">
           {{ .description }}
         </p>

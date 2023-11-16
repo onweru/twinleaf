@@ -10,4 +10,13 @@ We've expanded from our roots in the Bay Area to provide solutions for homeowner
 
 We believe in building long-term relationships based on trust.
 """
+[[projects]]
+title = "Hayward"
+selected = [1,2,3,4]
+[[projects]]
+title = "Fremont"
+selected = [1,7,9,13]
+[[projects]]
+title = "San Leandro"
+selected = [1,4,5,8]
 +++

@@ -116,7 +116,7 @@ button
   height: 75vh
   background-color: var(--secondary-darkblue)
   @media  screen and (max-width: 667px)
-    margin-top: 8rem
+    margin-top: 7rem
     background-position: bottom
     height: 50vh
   &_headline
@@ -162,6 +162,8 @@ button
       width: 90%
       // width: max-content
       // flex-direction: column
+  &_content
+    flex: 1
   &_prevArrow, &_nextArrow
     font-size: 4rem
     position: absolute
@@ -294,6 +296,11 @@ button
       bottom: 5%
       left: 3%
       right: 3%
+    @media  screen and (max-width: 467px)
+      width: 100%
+      transform: translateX(-1.5rem) scale(0.9)
+    @media  screen and (max-width: 400px)
+      transform: translateX(-6.5rem) scale(0.67)
     img
       grid-column: 1/2
       grid-row: 1/-1
@@ -301,6 +308,8 @@ button
   &_testimony
     grid-column: -2/-1
     font-weight: 400
+    font-size: 16px
+    text-align: left
   &_name
     grid-column: 2/-1
     text-align: right
@@ -703,6 +712,9 @@ button
   &_item
     scroll-snap-align: end
     max-width: 100%
+    display: flex
+    flex-flow: column
+    gap: 0
 
 .left, .right
   --size: 2rem
@@ -725,7 +737,6 @@ button
   transform: translateX(1.5rem)
   @media screen and (max-width: 1024px)
     transform: translateX(-0.75rem)
-
 
 .form
   &_close
@@ -755,7 +766,6 @@ button
     100%
       transform: translateY(var(--displacement)) scale(0)
       opacity: 0
-
 
   &_error
     color: var(--color-danger)

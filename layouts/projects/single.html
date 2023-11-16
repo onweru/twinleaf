@@ -1,0 +1,38 @@
+{{ define "main" }}
+  <main class="main gallery_main" >
+    <header>
+      <h2>Projects</h2>
+    </header>
+    <section class="gallery_header gallery_wrapper">
+      <p class="gallery_description">
+        From drab to jaw-dropping. Here are a few of the projects we’ve completed. Whether the property is dated and just needs a refresh or has major issues requiring a full remodel, we do it all.
+      </p>
+      <p class="gallery_description">
+        <a href="/#contact" class="link">Reach out to us today</a> for more information.</p>
+    </section>
+
+    <section class="subsection subsection_wrapper">
+      {{ range .Params.projects }}
+      <div class="subsection_grid">
+        {{ $title := .title }}
+        <h2 class="subsection_title">{{ $title }}</h2>
+        {{ $title := replace (lower $title) " " "_" }}
+        {{ range seq .tally }}
+          {{ $index := cast.ToString . }}
+          {{ $images := partial "func/getImage" (dict "title" $title "index" .) }}
+          <div class="subsection_container">
+            <div class="subsection_img subsection_before">
+              <img src={{ $images.before }} alt="{{ $title }} {{ $index }} before" loading=lazy>
+              <span>before</span>
+            </div>
+            <div class="subsection_img subsection_after">
+              <img src={{ $images.after }} alt="{{ $title }} {{ $index }} after" loading=lazy>
+              <span>after</span>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+      {{ end }}
+    </section>
+  </main>
+{{ end }}

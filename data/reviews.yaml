@@ -1,40 +1,24 @@
-
-- name: 1. Clifford P.
+- description: I've been involved with Jason at Twin Leaf Properties on multiple properties over the years. He's extremely honest and fair. Understanding and accommodating all parties' needs. Highly responsive. Very thorough. One of the best. I will certainly be recommending him to people whose needs align.
+  name: Nick F.
+  role: Real Estate Agent in San Francisco
+- description: I'm very happy... if I had another house to sell in San Francisco, I would contact you. I cannot recommend you highly enough.
+  name: Clifford P.
   role: Seller in San Francisco
-  image: "/images/quotation-mark_gold.png"
-  description: I'm very happy... if I had another house to sell in San Francisco, I would contact you. I cannot recommend you highly enough.
-
-- name: 2. Clifford P.
-  role: Seller in San Francisco
-  image: "/images/quotation-mark_gold.png"
-  description: I'm very happy... if I had another house to sell in San Francisco, I would contact you. I cannot recommend you highly enough.
-
-- name: 3. Clifford P.
-  role: Seller in San Francisco
-  image: "/images/quotation-mark_gold.png"
-  description: I'm very happy... if I had another house to sell in San Francisco, I would contact you. I cannot recommend you highly enough.
-
-- name: 4. Clifford P.
-  role: Seller in San Francisco
-  image: "/images/quotation-mark_gold.png"
-  description: I'm very happy... if I had another house to sell in San Francisco, I would contact you. I cannot recommend you highly enough.
-
-- name: 5. Clifford P.
-  role: Seller in San Francisco
-  image: "/images/quotation-mark_gold.png"
-  description: I'm very happy... if I had another house to sell in San Francisco, I would contact you. I cannot recommend you highly enough.
-
-- name: 6.Clifford P.
-  role: Seller in San Francisco
-  image: "/images/quotation-mark_gold.png"
-  description: I'm very happy... if I had another house to sell in San Francisco, I would contact you. I cannot recommend you highly enough.
-
-- name: 7.Clifford P.
-  role: Seller in San Francisco
-  image: "/images/quotation-mark_gold.png"
-  description: I'm very happy... if I had another house to sell in San Francisco, I would contact you. I cannot recommend you highly enough.
-
-- name: 8. Clifford P.
-  role: Seller in San Francisco
-  image: "/images/quotation-mark_gold.png"
-  description: I'm very happy... if I had another house to sell in San Francisco, I would contact you. I cannot recommend you highly enough.
+- description: My experience was very good. You worked really well with us, explaining everything since it was our first time selling a house. The process was comfortable and easy and everyone involved did everything the way you explained. I highly recommend others sell their property to you. You dealt with what we couldn’t and that took a lot off our shoulders.
+  name: Mike N.
+  role: Seller in Hayward
+- description: It's been great putting my savings to work to earn a lot more interest than the bank pays while knowing it's secured by real estate.
+  name: Juline L.
+  role: Private Investor in Oakland
+- description: I worked with Jason and his team to sell an investment property... From acquisition through renovation and disposition I found him to be exceptionally resourceful, creative, and decisive, which helped the process move quickly and seamlessly. ... I would jump at the opportunity to work with Jason again in the future.
+  name: Stefan W.
+  role: Real Estate Agent in Sunnyvale
+- description: Very professional, upfront, and easy to deal with. Looking forward to doing another transaction with them. My clients were happy with the deal... thanks!
+  name: Erdy M.
+  role: Real Estate Agent in Alameda
+- description: I want to take this time to thank you for making the process so painless. It took me two years to decide to sell and working with you eased my decision.
+  name: Maggie P.
+  role: Seller in Mountain View
+- description: They were transparent, responsive, sincere and knowledgeable. I highly recommend working with them.
+  name: Richard K.
+  role: Private Investor in San Francisco

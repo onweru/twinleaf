@@ -6,17 +6,22 @@
 
     <div class="projects_carousel">
       <div class="projects_slider projects carousel">
-      {{ range site.Data.projects }}
-        <div class="projects_slide">
-          <div class="projects_image projects_image-before">
-            <img src="{{ .before }}" alt="{{ .description }}">
-            <span class="projects_span projects_span-before">BEFORE</span>
+      {{ range .Params.projects }}
+        {{ $title := replace (lower .title) " " "_" }}
+        {{ range .selected }}
+          {{ $index := cast.ToString . }}
+          {{ $images := partial "func/getImage" (dict "title" $title "index" .) }}
+          <div class="projects_slide">
+            <div class="projects_image projects_image-before">
+              <img src="{{ $images.before }}" alt="{{ $title }} {{ $index }} before">
+              <span class="projects_span projects_span-before">BEFORE</span>
+            </div>
+            <div class="projects_image projects_image-after">
+              <img src="{{ $images.after }}" alt="{{ $title }} {{ $index }} after">
+              <span class="projects_span projects_span-after">AFTER</span>
+            </div>
           </div>
-          <div class="projects_image projects_image-after">
-            <img src="{{ .after }}" alt="{{ .description }}">
-            <span class="projects_span projects_span-after">AFTER</span>
-          </div>
-        </div>
+        {{ end }}
       {{ end }}
       </div>
     </div>

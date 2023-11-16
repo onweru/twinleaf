@@ -1,0 +1,7 @@
+{{ $title := .title }}
+{{ $slug := "/images/project/" }}
+{{ $index := cast.ToString .index }}
+{{ $after := printf "%s%s_%s_after.jpg" $slug $title $index }}
+{{ $before := printf "%s%s_%s_before.jpg" $slug $title $index }}
+
+{{ return (dict "before" $before "after" $after) }}
