@@ -211,6 +211,14 @@ button
     margin-top: 2rem
     color: #676767
     font-weight: 400
+    text-overflow: ellipsis
+    overflow: hidden
+    display: -webkit-box
+    -webkit-line-clamp: 6
+    -webkit-box-orient: vertical
+    &:hover
+      -webkit-line-clamp: 20
+        // max-height: initial
 
 .section
   padding-top: 2rem
@@ -303,7 +311,7 @@ button
   &_testimony
     grid-column: -2/-1
     font-weight: 400
-    font-size: 16px
+    font-size: 13.5px
     text-align: left
   &_name
     grid-column: 2/-1
@@ -599,7 +607,7 @@ button
     @extend .wrapper
     padding-bottom: 5rem
     color: #a9aebf
-    font-weight: 500
+    font-weight: 400
     @media  screen and (max-width: 667px)
       padding-bottom: 2rem
   &_top
