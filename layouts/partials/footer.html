@@ -6,18 +6,13 @@
         <p class="footer_text">
           Twin Leaf Properties was founded in 2018 to help people overcome challenges with homes and properties.
         </p>
-        <!-- <div class="footer_callagent">
-          <img src="/images/phone_icon.png" alt="">
-          <span>Call Agent</span>
-          <span>(510) 262-2867 </span>
-        </div> -->
       </div>
       <div class="footer_explore">
         <h4>Explore</h4>
         <ul class="footer_links">
           {{ range site.Data.footer }}
             <li class="footer_link">
-              <a href={{ absURL "" }}{{ .url }}>{{ .name }}</a>
+              <a href={{ absURL "" }}{{ .url }} class="text-title">{{ .name }}</a>
             </li>
           {{ end }}
         </ul>
@@ -29,11 +24,11 @@
           <button type="submit">Subscribe</button>
         </form>
         <div class="footer_emailus">
-          <p>EMAIL US</p>
+          <p class="text-title">EMAIL US</p>
           <p>contact@twinleafproperties.com</p>
         </div>
         <div class="footer_callus">
-          <p>CALL US</p>
+          <p class="text-title">CALL US</p>
           <p>(510) 262-2867</p>
         </div>
       </div>
